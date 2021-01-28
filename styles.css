@@ -8,15 +8,18 @@ body{
     cursor: pointer;
 }
 .head{
+    width: 85vw;
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
     align-items: center;
-    margin: 4rem 4rem 15rem;
+    margin: 4rem auto 15rem;
 }
 .button-try{
-    width: 8rem;
+    width: 100%;
+    min-width: 8rem;
     border: 1px solid hsl(322, 100%, 66%);
+    color: hsl(322, 100%, 66%);
     padding: 0.5rem 0;
     text-align: center;
     border-radius: 2.5rem;
@@ -36,7 +39,7 @@ body{
     line-height: 1.5rem;
 }
 .main{
-    margin: 8rem 4rem;
+    margin: 6rem 7rem;
     text-align: center;
 }
 .main .heading{
@@ -45,11 +48,11 @@ body{
 }
 .main .description{
     font-size: 1.25em;
-    width: 600px;
+    width: 40vw;
     margin: 1rem auto;
 }
 .button-get-started{
-    width: 400px;
+    width: 30vw;
     background-color: hsl(322, 100%, 66%);
     padding: 1.5rem 0;
     border-radius: 2.5rem;
@@ -65,7 +68,7 @@ body{
 }
 .image-screen-mockups{
     margin: 4rem 0;
-    max-width: 85vw;
+    max-width: 78vw;
 }
 .stats{
     display: grid;
@@ -78,7 +81,7 @@ body{
 .stats .data{
     font-size: 6em;
     font-weight: 700;
-    margin: 3rem 0 1rem;
+    margin: 1rem 0 0rem;
 }
 .stats .stat-name{
     font-size: 1.25em;
@@ -86,9 +89,9 @@ body{
     margin: 0;
 }
 .stats .icon{
-    width: 3rem;
+    width: 2rem;
     position: absolute;
-    left: 0;
+    left: 0.5rem;
 }
 .curved-sections{
     width: 100%;
@@ -108,13 +111,14 @@ body{
     width: 90%;
 }
 .feature-section .heading{
-    font-size: 2.5rem;
+    font-size: 2.5em;
     margin: 1rem 0;
 }
 .feature-section .description{
     margin: 1rem 0;
-    font-size: 1rem;
+    font-size: 1em;
     width: 90%;
+    font-weight: 600;
 }
 .flowing-conversations{
     background-color: #fff;
@@ -161,14 +165,11 @@ body{
 }
 .social-media .icon{
     font-size: 2.5em;
-    margin: 0 0.4rem;
+    margin: 0 0.2rem;
     cursor: pointer;
 }
 .social-media .icon:hover{
     color: aqua;
-}
-.newsletter{
-    margin: 0 1rem 1rem 2rem;
 }
 .newsletter .title{
     font-size: 1.5em;
@@ -182,22 +183,140 @@ body{
 .input-form{
     display: grid;
     margin: 3rem 0;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: auto auto;
     gap: 2rem;
 }
 .input-form .input-email{
     outline: none;
     border-radius: 5px;
     border: none;
+    width: 100%;
+    font-size: 1.5em;
+    color: hsl(192, 100%, 9%);
 }
 .input-form .button-subscribe{
     text-align: center;
-    padding: 0.90rem 0;
+    padding: 0.90rem 1rem;
     margin: 0;
     background-color: hsl(322, 100%, 66%);
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1.2em;
 }
 .input-form .button-subscribe:hover{
     background-color: hsl(321, 100%, 78%);
+}
+@media (max-width: 900px){
+    body{
+        font-size: 13px;
+    }
+    .head{
+        margin: 0.5rem auto 8rem;
+    }
+    .description{
+        width: 65% !important;
+    }
+    .head .button-try{
+        min-width: 6rem;
+        font-size: 0.75em;
+    }
+    .head .logo{
+        width: 50%;
+    }
+    .main{
+        margin: 4rem 2rem;
+    }
+    .main .heading{
+        font-size: 2.5em;
+    }
+    .main .description{
+        font-size: 1.2em;
+        margin: auto;
+    }
+    .button-get-started{
+        width: 60%;
+        font-size: 1em;
+        padding: 0.8rem 0;
+    }
+    .stats, .feature-section, .footer{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        gap: 3rem;
+    }
+    .stats{
+        gap: 6rem;
+    }
+    .stats .data{
+        font-size: 5em;
+    }
+    .top-1{
+        content: url("./images/bg-section-top-mobile-1.svg");
+    }
+    .top-2{
+        content: url("./images/bg-section-top-mobile-2.svg");
+    }
+    .bottom-1{
+        content: url("./images/bg-section-bottom-mobile-1.svg");
+    }
+    .bottom-2{
+        content: url("./images/bg-section-bottom-mobile-2.svg");
+    }
+    .footer-top{
+        content: url("./images/bg-footer-top-mobile.svg");
+    }
+    .feature-section{
+        padding: 4rem 1.5rem;
+        text-align: center;
+    }
+    .feature-section .heading{
+        font-size: 1.75em;
+    }
+    .feature-section .description{
+        width: 100%;
+        font-size: 1.2em;
+        line-height: normal;
+        margin: auto;
+    }
+    .feature-section img{
+        margin: auto;
+        width: 75%;
+        grid-area: 1 / 1 / 1 / 1;
+    }
+    .flowing-conversations{
+        margin: 3rem 0;
+    }
+    .section .heading{
+        font-size: 2em;
+    }
+    .footer{
+        padding: 2rem;
+        gap: 7rem;
+    }
+    .footer .logo{
+        width: 65%;
+        max-width: 13rem;
+    }
+    .newsletter{
+        grid-area: 1 / 1 / 1 / 1;
+    }
+    .input-form{
+        display: block;
+    }
+    .input-form .input-email{
+        padding: 1rem;
+        width: calc(100% - 2rem);
+        margin: 0.5rem 0;
+    }
+    .input-form .button-subscribe{
+        width: calc(50% - 2rem);
+        margin: 0.5rem 0;
+        position: relative;
+        float: right;
+        padding: 1rem;
+    }
+}
+@media (max-width: 425px){
+    .description{
+        width: 100% !important;
+    }
 }
